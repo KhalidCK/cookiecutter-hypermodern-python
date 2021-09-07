@@ -17,6 +17,10 @@ ports:
     onOpen: notify
 
 tasks:
-  - before: pyenv install miniconda3-3.9.1 && pyenv global miniconda3-3.9.1
+
+  - before: >
+     pyenv install miniconda3-3.9.1
+     pyenv global miniconda3-3.9.1
+     pip install poetry cookiecutter nox nox-poetry 
     init:
       export PIP_USER=no 
