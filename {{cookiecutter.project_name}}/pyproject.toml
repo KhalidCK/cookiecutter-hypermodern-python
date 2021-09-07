@@ -3,7 +3,7 @@ name = "{{cookiecutter.project_name}}"
 version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.friendly_name}}"
 authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
-readme = "README.rst"
+readme = "README.md"
 documentation = "https://{{cookiecutter.project_name}}.readthedocs.io"
 {% if cookiecutter.package_name != cookiecutter.project_name.replace('-', '_') -%}
 packages = [
@@ -17,7 +17,7 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
+python = "^3.8.1"
 click = "^8.0.1"
 
 [tool.poetry.dev-dependencies]
