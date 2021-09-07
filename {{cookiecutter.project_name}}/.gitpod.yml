@@ -1,0 +1,21 @@
+vscode:
+  extensions:
+    - ms-python.python
+    - littlefoxteam.vscode-python-test-adapter
+    - hbenl.test-adapter-converter
+    - hbenl.vscode-test-explorer
+    - ms-toolsai.jupyter
+
+image:
+  file: .gitpod.dockerfile
+
+ports:
+  # Mkdocs local server; start it with `poe docs`
+  - port: 8000
+    onOpen: notify
+  - port: 8080
+    onOpen: notify
+
+tasks:
+  - init:
+      export PIP_USER=no && poetry install
